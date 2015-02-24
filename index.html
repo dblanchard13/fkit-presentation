@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset ="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Puppy Portfolio</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/puppy.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bower_components/fkit/dist/fkit.js"></script>
+  </head>
+  <body>
+    
+    <div class='container'>
+      <div id='header' class='row'>
+        <div id='puppyLogo' class ='col-md-6'>
+          <img id='puppyLogo' class='img-responsive' src='http://www.dogguide.net/blog/wp-content/uploads/2010/11/5188908655_ca48100b2f_z.jpg'>
+        </div>
+        <div class='col-md-6 text-right'>
+          <h1>David Boss Blanchard</h1>
+          <h4>He's a motha-f***** boss</h4>
+        </div>
+      </div>
+
+      <div class='row'>
+        <div class='col-md-12'>
+          <hr>
+        </div>
+      </div>
+
+      <div class='row' id='titlePhoto'>
+        <img class='img-responsive' src='http://images4.fanpop.com/image/photos/15800000/Siberian-Husky-Puppy-puppies-15897208-1280-800.jpg'>
+      </div>
+
+      <div class='row'>
+        <div class='col-md-12'>
+          <hr>
+          <h2 class='text-center'>PUPPIES!!!</h2>
+        </div>
+      </div>
+
+      <div class='row text-center'>
+        <div class ='col-md-4'>
+          <img class='img-responsive' data-toggle="modal" data-target="#myModal" src='http://i480.photobucket.com/albums/rr163/NinjaShade_04/HuskyPuppy.jpg'>
+          <h2>Puppy #1</h2>
+        </div>
+
+        <div class ='col-md-4'>
+          <img class='img-responsive fkit' data-toggle="modal" data-target="#yourModal" src='https://github.com/nullobject/fkit/raw/master/logo.png'>
+          <h2>fKIT</h2>
+        </div>
+
+        <div class ='col-md-4'>
+          <img class='img-responsive' data-toggle="modal" data-target="#noModal" src='http://i480.photobucket.com/albums/rr163/NinjaShade_04/HuskyPuppy.jpg'>
+          <h2>Puppy #2</h2>
+        </div>
+
+      </div>
+    </div>
+
+     <div class='row'>
+     <div class="col-md-1"></div>
+        <div class='col-md-10'>
+          <hr>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+
+    <div id="scriptSpace">
+    <script>
+    var example = [1,2,3]
+    var sumResults = F.sum(example);
+    var permutationsResults = F.permutations('abc');
+    var indices = F.elemIndices(2, [1,2,3,2,4,2])
+    var filtered = F.filter(F.eq('D'), 'David Aaron Blanchard is Da Bomb Diggity')
+    var found = F.find(F.gt(10), [1,17,23,12,3,45,-15])
+    var group1 = F.group([1, 2, 2, 3, 2, 3, 3]); // [[1], [2, 2], [3, 3, 3]]
+    var group2 = F.maximum([1, 2, 3, 7, 13, 3, 111, -21]); // ['M', 'i', 'ss', 'i', 'ss', 'i', 'pp', 'i']
+
+    $('#scriptSpace').append('<div class="examples" data-toggle="modal" data-target="#sumModal">F.sum([1,2,3]) = ?</div>')
+    $('#scriptSpace').append('<div class="examples" data-toggle="modal" data-target="#elemModal">F.elemIndices(2, [1,2,3,2,4,2]) = ?</div>')
+    $('#scriptSpace').append('<div class="examples" data-toggle="modal" data-target="#filModal">F.filter(F.eq("D"), "David Aaron Blanchard is Da Bomb Diggity") = ?</div>')
+    $('#scriptSpace').append('<div class="examples" data-toggle="modal" data-target="#findModal">F.find(F.gt(10), [1,17,23,12,3,45,-15]) = ?</div>')
+    $('#scriptSpace').append('<div class="examples" data-toggle="modal" data-target="#groupModal">F.group([1, 2, 2, 3, 3, 3]) = ?</div>')
+    $('#scriptSpace').append('<div class="examples" data-toggle="modal" data-target="#group2Modal">F.maximum([1, 2, 3, 7, 13, 3, 111, -21]) = ?</div>')
+    $('#scriptSpace').append('<div class="examples" data-toggle="modal" data-target="#permutationsModal">F.permutations("abc") = ?</div>')
+
+    </script>
+    </div>
+
+    <div class='row'>
+      <div class="col-md-3"></div>
+       <div class='col-md-6'>
+         <hr>
+       </div>
+       <div class="col-md-3"></div>
+     </div>
+
+     <div id="instructions">
+      <h1><pre>Installation Instructions</pre></h1>
+      <div><pre> npm install fkit</pre></div>
+      <div><pre> var F = require('fkit');</pre></div>
+      <div><pre> bower install fkit</pre></div>
+     </div>
+
+     <div class='row'>
+       <div class="col-md-3"></div>
+        <div class='col-md-6'>
+          <hr>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+
+      <div class="footer">
+        <img src="https://c1.staticflickr.com/1/110/293340835_4345e83c1b.jpg">
+      </div>
+
+
+
+        <!-- Modal -->
+    <div class="modal fade" id="sumModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            F.sum([1,2,3]) = 6
+            </br>It's like reduce for dummies
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="elemModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            F.elemIndices(2, [1,2,3,2,4,2]) = [1,3,5]
+            </br>indexOf() on steroids
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="filModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            F.filter(F.eq("D"), "David Aaron Blanchard is Da Bomb Diggity") = "DDD"
+            </br>This one was all for me
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="findModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            F.find(F.gt(10), [1,17,23,12,3,45,-15]) = 17
+            </br>Returns undefined if nothing satisfies the predicate function
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="groupModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            F.group([1, 2, 2, 3, 3, 3]) = [[1],[2,2],[3,3,3]]
+            </br>Uses a strict equal to group items in a list.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="group2Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            F.maximum([1, 2, 3, 7, 13, 3, 111, -21]) = 111
+            </br>There's also a minimum version.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="permutationsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-perm-body" font-size="30px">
+            F.permutations("abc") = </br>["abc", "bac", "cba", "bca", "cab", "acb"]
+            </br>No idea when this could be useful...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
